@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!--<link rel="icon" type="image/jpeg" href="image_1_1773658654377.jpg">-->
     
-    <link rel="stylesheet" href="style.css">
+  <!--  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -19,7 +19,7 @@
             <a href="#services">Services</a>
             <a href="#about">About</a>
            <!--<a href="#contact">Contact</a>-->
-        </div>
+    <!--    </div>
     </nav>
 
     <header class="hero" id="home">
@@ -103,5 +103,113 @@
     </footer>
 
     <script src="script.js"></script>
+</body>
+</html>-->
+
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Eagles Pawa Limited</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --white: #ffffff;
+            --brand-blue: #0288d1;
+            --gold: #d4af37;
+            --light-blue: #f0f7ff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: radial-gradient(circle, var(--light-blue) 0%, var(--white) 100%);
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 500px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        /* The big 404 number */
+        h1 {
+            font-size: 8rem;
+            margin: 0;
+            line-height: 1;
+            color: var(--brand-blue);
+            position: relative;
+        }
+
+        h1 span {
+            color: var(--gold);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            color: #1a2a36;
+        }
+
+        p {
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+
+        /* The "Go Home" button */
+        .btn-home {
+            background: var(--gold);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
+            background: #c29d2f; /* Slightly darker gold */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile specific font size adjustment */
+        @media (max-width: 480px) {
+            h1 { font-size: 6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>4<span>0</span>4</h1>
+        <h2>Oops! This page took flight.</h2>
+        <p>The link you followed might be broken, or the page may have moved. Let's get you back to our supplies.</p>
+        
+        <a href="index.html" class="btn-home">Return to Homepage</a>
+
+        <div style="margin-top: 40px;">
+            <p style="font-size: 0.8rem;">Eagles Pawa Limited | General Merchandise</p>
+        </div>
+    </div>
+
 </body>
 </html>
