@@ -1,0 +1,220 @@
+/* =========================================
+           VARIABLES (Color Theme & Spacing)
+           ========================================= */
+        :root {
+            --brand-blue: #0A2540;
+            --brand-light-blue: #113A63;
+            --gold: #D4AF37;
+            --gold-hover: #B5952F;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --bg-light: #F9F9FB;
+            --white: #FFFFFF;
+            --transition: all 0.3s ease;
+        }
+
+        /* =========================================
+           GLOBAL RESET
+           ========================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        /* =========================================
+           NAVIGATION
+           ========================================= */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--brand-blue);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .links a:hover, .links a.active {
+            color: var(--gold);
+            border-bottom: 2px solid var(--gold);
+        }
+
+        nav.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 10px 5%;
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            background: linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80') center/cover;
+            height: 85vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--white);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: #E0E0E0;
+            margin-bottom: 30px;
+        }
+
+        .btn-gold {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--brand-blue);
+            padding: 15px 35px;
+            font-weight: 700;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-gold:hover {
+            background-color: var(--gold-hover);
+            transform: translateY(-2px);
+        }
+
+        /* =========================================
+           SECTIONS & LAYOUT
+           ========================================= */
+        .section {
+            padding: 80px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--brand-blue);
+            margin-bottom: 10px;
+        }
+
+        .section-title div {
+            height: 4px;
+            width: 60px;
+            background-color: var(--gold);
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid transparent;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--gold);
+        }
+
+        .card h3 { color: var(--brand-blue); margin-bottom: 15px; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; }
+
+        .agpo-banner {
+            background-color: var(--brand-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-bottom: 60px;
+            max-width: 1200px;
+            margin: 0 auto 60px auto;
+        }
+
+        .agpo-banner h2 { color: var(--gold); margin-bottom: 10px; }
+        
+        .doc-container {
+            text-align: center;
+            padding: 40px 0;
+            background: #f1f1f1;
+        }
+
+        footer {
+            background: var(--brand-blue);
+            color: white;
+            padding: 60px 5% 20px;
+        }
+
+        @media (max-width: 768px) {
+            nav { flex-direction: column; gap: 15px; }
+            .links { gap: 15px; }
+
+        }
